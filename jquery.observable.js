@@ -113,7 +113,7 @@
 	}
 
 	function onObservableChange(ev, eventArgs) {
-		if ( ev.data !== undefined && !(ev.data && ev.data.off)) {
+		if ( ev !== undefined && !(ev.data && ev.data.off)) {
 			// Skip if !!ev.data.off: - a handler that has already been removed (maybe was on handler collection at call time - then removed by another handler)
 			var value = eventArgs.oldValue,
 				ctx = ev.data;
